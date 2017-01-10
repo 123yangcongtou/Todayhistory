@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        >
+        <View
+            android:background="#33b5e5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24dp"
+            android:textColor="#fff"
+            android:layout_gravity="center"
+             />
+
+        <ImageView
+            android:id="@+id/right"
+            android:src="@mipmap/ic_right"
+            android:paddingRight="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical" />
+
+        <ImageView
+            android:id="@+id/left"
+            android:src="@mipmap/ic_left"
+            android:paddingLeft="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical" />
+    </FrameLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/frame"
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        >
+    </android.support.v7.widget.RecyclerView>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleX="1"
+        android:scaleY="1"
+        android:layout_alignBottom="@+id/rv"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        app:backgroundTint="#f00"
+        android:src="@mipmap/ic_calender"
+        />
+
+</RelativeLayout>
